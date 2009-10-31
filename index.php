@@ -75,6 +75,9 @@ $fp = fopen('data.txt', 'a');
 fwrite($fp, $_POST['email'].",".$_POST['type'].",".time()."\n");
 fclose($fp);
 
+// In addition to the following account being "insert only" permission, you will need to ask Brian to
+// whitelist your IP address you wish to connect from
+
 $link = mysql_connect('dojodb.dustball.com', 'dojoinsertonly', 'insert1line');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
