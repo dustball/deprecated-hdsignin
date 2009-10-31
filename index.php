@@ -7,8 +7,13 @@ function stopRKey(evt) {
   var evt = (evt) ? evt : ((event) ? event : null); 
   var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
   if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+  if (evt.keyCode==45) {
+    document.getElementById("staffbuttons").style.display="block";
+    setTimeout("document.getElementById('staffbuttons').style.display='none';",30*1000);
+  }
 } 
 
+document.onkeydown = stopRKey; 
 document.onkeypress = stopRKey; 
 
 </script>
@@ -46,6 +51,11 @@ E-mail: <input id=em type=text name=email>
 <input type=button value=Member onclick="go('Member')"/>
 <input type=button value=Guest onclick="go('Guest')"/>
 <input type=button value="Event Attendee" onclick="go('Event')"/>
+
+<div id="staffbuttons" style="display:none">
+  <input type=button value="Staff (keyholder)" onclick="go('StaffKey')"/>
+  <input type=button value="Staff (nokey)" onclick="go('StaffNoKey')"/>
+</div>
 
 <input id=ttt type=hidden name=type value=""/>
 <script>
