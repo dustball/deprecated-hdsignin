@@ -38,6 +38,19 @@ input {font-size:130%; margin:.5em }
   <center>Thank You</center>
 </div>
 
+<div id=privacy style="padding:1em; display:none; position:absolute; z-index:2; top:25%; left:25%; width:40%; border:2px solid black; background:#baffbc; font-size:80% ">
+  <h2>E-mail Privacy</h2>
+
+  <p>The Dojo will not sell, rent, or give out your e-mail address to ANYONE.</p>
+
+  <p>The Dojo may send you a "welcome e-mail" telling you about membership, and we may contact you in the future about interesting events and other happenings (which of course, you can opt-out of).</p>
+
+  <p>We hate spam & we're not evil ;)</p>
+
+  <p><a href="#" onclick="document.getElementById('privacy').style.display='none';">Close</a></p>
+
+</div>
+
 
 <center>
 <img style="margin:1.5em" src="logo.png" width=690 height=244 >
@@ -45,6 +58,7 @@ input {font-size:130%; margin:.5em }
 <h2>Please Sign In</h2>
 
 E-mail: <input id=em type=text name=email>
+<a style="color:green; font-size:9px" href="#" onclick="document.getElementById('privacy').style.display='block';">E-mail Privacy</a>
 <br>
 
 
